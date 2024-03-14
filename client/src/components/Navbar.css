@@ -1,0 +1,83 @@
+header {
+    background-color: #1f2937;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: auto;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+    background-color: #1f2937;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.navbar .logo-brand {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .logo-brand span {
+    color: #d8a854;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler {
+    color: #fff;
+    border: none
+}
+
+.navbar-nav li .link {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    margin: 0 12px;
+}
+
+.navbar-nav li .link:hover {
+    color: #d8a854;
+}
+
+.navbar-nav li .link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #d8a854;
+}
+
+.navbar-nav li .link:hover::after {
+    width: 100%;
+}
+
+.navbar nav ul li .link.active {
+    position: relative;
+    width: 0;
+    transition: 0.3s all;
+}
+
+.navbar nav ul li .link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #d8a854;
+}

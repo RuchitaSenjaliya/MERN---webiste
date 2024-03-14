@@ -1,0 +1,21 @@
+.analytics {
+    background-color: #e9f2ffbd;
+    color: #000;
+    padding: 40px 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.analytic-box {
+    text-align: center;
+}
+
+.analytic-box .num {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.analytic-box .desc {
+    font-size: 15px;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #111827;
+  /* --text-primary: #be54d8; */
+  --text-primary: #d8a854;
+  --text-light: #f7f7f7;
+  --text-gray: #d2d2d2;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  /* background-color: #383c42; */
+  background-color: var(--bg-main);
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: #1f2428;
+  font-weight: 600;
+  padding: 12px 24px;
+  /* border: none; */
+  border: 2px solid var(--text-primary);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 24px;
+  /* border: none; */
+  border: 2px solid var(--text-primary);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-light);
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 2px solid var(--text-primary);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.btn-outline:hover {
+  background-color: var(--text-primary);
+  color: var(--text-light);
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 2px solid var(--text-primary);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .btn-primary,
+  .btn-outline {
+    padding: 9px 15px;
+    font-size: 15px;
+    margin-top: 12px;
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover {
+    padding: 9px 15px;
+    font-size: 15px;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+
+  .btn-primary,
+  .btn-outline,
+  .btn-primary:hover,
+  .btn-outline:hover {
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+
+}

@@ -1,0 +1,144 @@
+.admin {
+    display: flex;
+    align-items: start;
+}
+
+
+
+.admin .sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: #242835;
+    padding: 25px 12px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.admin .logo-brand {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.admin .logo-brand a {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.admin .logo-brand a span {
+    color: #d8a854;
+}
+
+.admin .sidebar nav ul {
+    /* text-align: center; */
+    padding-left: 0;
+    margin-left: 16px;
+}
+
+.admin .sidebar nav ul li {
+    padding: 12px 0;
+}
+
+.admin .sidebar nav ul li a {
+    list-style-type: none;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    transition: 0.3s all;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.admin .sidebar nav ul li a:hover {
+    color: #d8a854;
+}
+
+.admin .main-content {
+    padding: 25px 12px;
+    color: #fff;
+    width: calc(100% - 20%);
+    margin-left: 20%;
+}
+
+.text-yellow {
+    color: #d8a854 !important;
+}
+
+.sm-logo {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .admin .logo-brand a {
+        font-size: 20px;
+    }
+
+    .admin .sidebar nav ul li a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .admin .sidebar {
+        width: 245px;
+        padding: 25px 0;
+    }
+
+    .admin .main-content {
+        width: calc(100% - 245px);
+        margin-left: 245px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .admin .sidebar {
+        width: 150px;
+        padding: 25px 0;
+    }
+
+    .admin .main-content {
+        width: calc(100% - 150px);
+        margin-left: 150px;
+    }
+
+    .admin .logo-brand a {
+        font-size: 16px;
+    }
+
+    .admin .sidebar nav ul li a {
+        font-size: 14px;
+    }
+
+    .admin .sidebar nav ul li {
+        padding: 10px 0;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .hide-sidebar-link {
+        display: none;
+    }
+
+    .sm-logo {
+        display: block;
+    }
+
+    .admin .sidebar {
+        width: 60px;
+        padding: 25px 0;
+    }
+
+    .admin .main-content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+
+    .admin .sidebar nav ul li svg {
+        font-size: 20px;
+    }
+}

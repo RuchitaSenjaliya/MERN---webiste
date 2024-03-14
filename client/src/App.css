@@ -1,0 +1,583 @@
+.full-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    color: var(--text-light);
+}
+
+.main-title {
+    color: var(--text-light);
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.main-title::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--text-primary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*------------------------------------- signup and login styling ----- ------------------------------ */
+.login .login-form,
+.signup .signup-form {
+    width: 50%;
+    margin: auto;
+}
+
+.signup .signup-form h1,
+.login .login-form h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 18px;
+    background-color: #292c31;
+    color: var(--text-light);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none
+}
+
+/*------------------------------------- Home styling ----- ------------------------------ */
+
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.home .left,
+.home .right {
+    margin: 100px 0;
+}
+
+.home .left .sub-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.home .left .title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 65px;
+    margin: 16px 0;
+}
+
+.home .left .title span {
+    color: var(--text-primary);
+}
+
+.home .left .para {
+    color: #d3d3d3;
+    text-align: justify;
+}
+
+.btn-grp {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.home .right {
+    text-align: center;
+}
+
+.help {
+    margin: 50px 0;
+}
+
+.help .right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.help .right .title {
+    font-size: 36px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.help .right .para,
+.help .right .sub-title {
+    color: #d3d3d3;
+}
+
+/*------------------------------------- footer styling ----- ------------------------------ */
+.footer {
+    background-color: var(--text-primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
+
+/*------------------------------ contact styling ----- ------------------------------ */
+
+.contact .title {
+    color: var(--text-light);
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.contact .content {
+    margin-top: 18px;
+}
+
+.contact .content .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .content .left iframe {
+    width: 100%;
+    height: 450px;
+}
+
+/* .contact .content .left img {
+    width: 100%;
+} */
+
+
+/*------------------------------ about styling ----- ------------------------------ */
+.about .left {
+    display: flex;
+    height: 100%;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about .left .title {
+    font-size: 36px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.about .left .para,
+.about .left .sub-title {
+    color: #d3d3d3;
+}
+
+.about .left .para {
+    margin-top: 14px;
+}
+
+.about .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .right img {
+    width: 100%;
+    height: 100%;
+}
+
+/*------------------------------ services styling ----------------------------------- */
+
+.services {
+    margin-bottom: 50px;
+}
+
+.services .service-card {
+    margin: 14px 0;
+    background-color: #303238;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-services .service-card {
+    /* height: 480px;
+     */
+    margin: 14px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #17181e;
+}
+
+.services .service-card img,
+.admin-services .service-card img {
+    width: 100%;
+}
+
+.services .service-card .card-body {
+    padding: 20px;
+}
+
+.admin-services .service-card .card-body {
+    padding: 20px;
+    /* height: 260px;
+     */
+}
+
+.services .service-card .card-body .info,
+.admin-services .service-card .card-body .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #bbbbbb;
+}
+
+.services .service-card .card-body .title,
+.admin-services .service-card .card-body .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+.services .service-card .card-body .desc,
+.admin-services .service-card .card-body .desc {
+    font-size: 1rem;
+    padding: 8px 0;
+    color: #d6d6d6;
+}
+
+.admin-services .service-card .card-body .desc,
+.admin-services .service-card .card-body .info {
+    color: #303238;
+}
+
+.admin-services .service-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-services .service-card .card-body .btn-grp {
+    align-self: flex-end;
+}
+
+
+/* admin users styline  */
+.edit-btn {
+    background-color: var(--text-primary);
+    border-radius: 50px;
+    padding: 4px 18px;
+    color: #fff;
+    border: 2px solid var(--text-primary);
+    transition: 0.3s all;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 4px 18px;
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+}
+
+.delete-btn {
+    background-color: crimson;
+    border-radius: 50px;
+    padding: 4px 18px;
+    border: none;
+    color: #fff;
+    border: 2px solid crimson;
+    transition: 0.3s all;
+}
+
+.delete-btn:hover {
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 4px 18px;
+    border: 2px solid crimson;
+    color: crimson;
+}
+
+.admin-users table,
+.admin-contact table {
+    max-width: 1000px;
+    min-width: 700px;
+    margin-top: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-users table tr td {
+    /* padding: 20px 15px 7px 15px; */
+}
+
+.admin-users table tr td:nth-child(4),
+.admin-users table tr td:nth-child(5) {
+    text-align: center;
+}
+
+.error .error-code {
+    font-size: 14rem;
+    text-align: center;
+    margin: 25px 0 0;
+    color: crimson;
+    font-weight: 600;
+}
+
+.error .para {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+
+/* edit user styling  */
+.edit-user-section {
+    width: 600px;
+}
+
+.edit-user-section .update-user {
+    margin-top: 50px;
+    background-color: #17181e;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+
+.dashboard .user-info {
+    margin-top: 50px;
+}
+
+.dashboard .user-info .info-card {
+    background-color: #d3d3d3;
+    box-shadow: 0 0.3rem 1rem #ffffff26;
+    padding: 14px;
+    color: #292c31;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    gap: 26px;
+}
+
+.dashboard .user-info .info-card .icon {
+    background-color: #ffb63830;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.dashboard .user-info .info-card .icon svg {
+    font-size: 30px;
+}
+
+.dashboard .user-info .info-card .number {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.dashboard .user-info .info-card .desc {
+    font-size: 16px;
+}
+
+/* skeleton animation  */
+.skeleton-loading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skeleton {
+    width: 100%;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    background-color: #ccc;
+    /* Background color of the skeleton */
+    margin-bottom: 10px;
+    /* Adjust margin as needed */
+    border-radius: 5px;
+    /* Adjust border radius as needed */
+}
+
+/* Optionally, you can add animation to make it more realistic */
+@keyframes skeleton-animation {
+    0% {
+        background-color: #4a4a4a;
+    }
+
+    50% {
+        background-color: #5e5e5e;
+    }
+
+    100% {
+        background-color: #4a4a4a;
+    }
+}
+
+.skeleton.loading {
+    animation: skeleton-animation 1.5s infinite;
+}
+
+@media screen and (max-width: 1100px) {
+    .admin .logo-brand a {
+        font-size: 24px;
+    }
+
+    .services .service-card .card-body .title,
+    .admin-services .service-card .card-body .title {
+        font-size: 1.3rem;
+        padding: 6px 0;
+        line-height: 30px;
+    }
+
+    .admin-services .service-card .card-body .desc,
+    .admin-services .service-card .card-body .info {
+        font-size: 14px;
+    }
+
+    .admin-services .service-card {
+        /* height: 400px; */
+        margin: 10px 0;
+        border-radius: 6px;
+    }
+
+    /* .services .service-card .card-body, */
+    .admin-services .service-card .card-body {
+        padding: 14px;
+        /* height: 280px; */
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .home .left .title {
+        font-size: 2.8rem;
+        line-height: 53px;
+    }
+
+    .admin .logo-brand a {
+        font-size: 22px;
+    }
+
+    .home .left .para {
+
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 997px) {
+
+    .services .service-card .card-body,
+    .admin-services .service-card .card-body {
+        padding: 14px;
+        /* height: 218px; */
+    }
+
+    .home .left {
+        margin: 30px 0 80px;
+    }
+
+    .home .right {
+        margin: 20px 0;
+    }
+
+    .help .left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .admin-services .service-card .card-body .desc,
+    .admin-services .service-card .card-body .info {
+        font-size: 12px;
+    }
+
+    .services .service-card .card-body .title,
+    .admin-services .service-card .card-body .title {
+        font-size: 1.1rem;
+        padding: 6px 0;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    .home .left .title,
+    .help .right .title {
+        font-size: 2rem;
+        line-height: 42px;
+        margin: 10px 0;
+    }
+
+    .home .left .sub-title,
+    .help .right .sub-title {
+        font-size: 12px;
+    }
+
+    .home .left .para,
+    .help .right .para {
+        font-size: 12px;
+        padding-right: 30px;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .analytic-box .num {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .about .left .title {
+        font-size: 28px;
+        padding: 8px 0;
+    }
+
+    .about .left .para {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
