@@ -5,7 +5,13 @@ import { AuthContext } from "../store/auth-context";
 import { IoMenu } from "react-icons/io5";
 
 export default function Navbar() {
-  const { isLoggedIn, user } = useContext(AuthContext);
+  // const [userData, setUserData] = useState({});
+  const { isLoggedIn, user, token } = useContext(AuthContext);
+
+  // useEffect(() => {
+  //   setUserData(user);
+  // }, [user]);
+  console.log(user);
 
   return (
     <>
@@ -65,7 +71,8 @@ export default function Navbar() {
                   Contact
                 </NavLink>
               </li>
-              {user.isAdmin && (
+
+              {token && user?.isAdmin && (
                 <li>
                   <NavLink
                     to="/admin"

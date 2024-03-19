@@ -11,34 +11,39 @@ export default function Services() {
         <div className="container">
           <div className="services">
             <div className="main-title">Services</div>
-            {isLoading && <SkeletonLoader />}
-            <div className="row">
-              {serviceData.map((item) => {
-                return (
-                  <div className="col-12 col-sm-6 col-lg-4" key={item._id}>
-                    <div className="service-card shadow">
-                      <img
-                        src={`${
-                          item.id
-                            ? `https://picsum.photos/id/${item.id * 5}/500/300`
-                            : `https://picsum.photos/id/50/500/300`
-                        }`}
-                        alt=""
-                        srcSet=""
-                      />
-                      <div className="card-body">
-                        <div className="info">
-                          <div className="provider">{item.provider}</div>
-                          <div className="price">${item.price}/-</div>
+            {isLoading ? (
+              <SkeletonLoader />
+            ) : (
+              <div className="row">
+                {serviceData.map((item) => {
+                  return (
+                    <div className="col-12 col-sm-6 col-lg-4" key={item._id}>
+                      <div className="service-card shadow">
+                        <img
+                          src={`${
+                            item.id
+                              ? `https://picsum.photos/id/${
+                                  item.id * 5
+                                }/500/300`
+                              : `https://picsum.photos/id/50/500/300`
+                          }`}
+                          alt=""
+                          srcSet=""
+                        />
+                        <div className="card-body">
+                          <div className="info">
+                            <div className="provider">{item.provider}</div>
+                            <div className="price">${item.price}/-</div>
+                          </div>
+                          <div className="title">{item.service}</div>
+                          <div className="desc">{item.description}</div>
                         </div>
-                        <div className="title">{item.service}</div>
-                        <div className="desc">{item.description}</div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </main>

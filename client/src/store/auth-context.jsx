@@ -36,6 +36,8 @@ export const AuthContextProvider = ({ children }) => {
       }
     } catch (error) {
       console.log("Failed to fetch data", error);
+    } finally {
+      setIsLoading(false);
     }
   }, [token]);
 
@@ -56,7 +58,7 @@ export const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     fetchServiceData();
     userAuthentication();
-  }, [userAuthentication]);
+  }, [userAuthentication, token]);
 
   const logoutUser = () => {
     setToken("");
@@ -69,6 +71,7 @@ export const AuthContextProvider = ({ children }) => {
         logoutUser,
         isLoggedIn,
         user,
+        token,
         serviceData,
         authorizationToken,
         isLoading,

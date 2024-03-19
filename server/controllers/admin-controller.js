@@ -47,7 +47,7 @@ const deleteUserById = async (req, res) => {
     next(error);
   }
 };
-const updateUserById = async (req, res) => {
+const updateUserById = async (req, res, next) => {
   try {
     console.log("req", req);
     const id = req.params.id;

@@ -1,6 +1,6 @@
 import { useCallback, useContext, useEffect, useState } from "react";
 import { AuthContext } from "../store/auth-context";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function EditUser() {
@@ -12,6 +12,8 @@ export default function EditUser() {
   });
   const params = useParams();
   const { authorizationToken } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const getSingleUserData = useCallback(async () => {
     try {
       const response = await fetch(
@@ -56,10 +58,11 @@ export default function EditUser() {
       );
       if (response.ok) {
         toast.success("Updated successfully");
+        navigate("/admin/users");
       } else {
         toast.error("Update failed");
       }
-      console.log(response);
+      console.log("edit user response", response);
     } catch (error) {
       console.log(error);
     }
@@ -102,8 +105,9 @@ export default function EditUser() {
               defaultValue={data.isAdmin}
               onChange={handleInput}
               value={data.isAdmin.toString()}>
-              <option value="True">True</option>
-              <option value="False">False</option>
+              <option value="">Choose</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
             </select>
             <button className="btn-primary w-100">Update</button>
           </form>
